@@ -18,6 +18,7 @@
     "react-scripts": "5.0.0",
     "slate": "^0.72.0",
     "slate-react": "^0.72.1",
+    "vercel": "^23.1.2",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
