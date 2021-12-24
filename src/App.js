@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-
+import MainPage from './MainPage';
+import { render } from "react-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import Login from './components/Login';
+import SignUp from './components/SignUp';
+import axios from 'axios'
 function App() {
+  const instance = axios.create({
+    withCredentials: true,
+    baseURL: "http://localhost:4000"
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+     <Router>
+       <Routes>
+      <Route path = "/" element = {<MainPage/>}/>
+      <Route path = "/Login" element = {<Login/>}/>
+      <Route path = "/signUp" element = {<SignUp/>}/>
+      </Routes>
+     </Router>
+   </div>
   );
 }
 

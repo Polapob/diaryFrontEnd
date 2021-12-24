@@ -1,0 +1,38 @@
+.ck-editor__editable_inline {
+    max-height: 500px;
+    max-width: 750px;
+    min-width: 750px;
+    min-height: 300px;
+  }
+
+  @media only screen and (max-width: 768px){
+  
+    .ck-editor {
+      max-height: 500px;
+      max-width: 400px;
+      min-width: 400px;
+      min-height: 250px;
+    }
+    .ck-editor__editable_inline {
+      max-height: 400px;
+      max-width: 400px;
+      min-width: 400px;
+      min-height: 200px;
+    }
+  }
+
+@media only screen and (max-width: 640px){
+  
+  .ck-editor {
+    max-height: 500px;
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 250px;
+  }
+  .ck-editor__editable_inline {
+    max-height: 400px;
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 200px;
+  }
+}
