@@ -19,7 +19,7 @@ function DisplayMemo(props) {
       <div className="flex flex-col sm:justify-start items-start sm:space-y-4 sm:px-6 sm:py-2 justify-center sm:h-auto space-y-2 h-auto">
         <div className="flex flex-row justify-between w-full">
           <div> {wantDate}</div>
-          {editable && <EditPost postDat userData = {props.userData} documentID = {documentID} writtenMemoUser = {writtenMemoUser} toggleCheckState = {props.toggleCheckState}/>}
+          {editable && <EditPost userData = {props.userData} documentID = {documentID} writtenMemoUser = {writtenMemoUser} toggleCheckState = {props.toggleCheckState}/>}
           
         </div>
         <div className="">Topic : {props.data.topic}</div>

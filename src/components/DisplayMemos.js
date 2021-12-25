@@ -4,7 +4,7 @@ import DisplayMemo from "./DisplayMemo";
 function DisplayMemos(props){
     const [memoData,setMemoData] = useState([]);
     const getAllMemos = ()=>{
-        axios.get("http://localhost:4000/getAllMemo").then((res)=>{
+        axios.get("/getAllMemo").then((res)=>{
             //console.log(res.data["memoData"]);
             setMemoData(res.data["memoData"]);
             //setUpdate(true);

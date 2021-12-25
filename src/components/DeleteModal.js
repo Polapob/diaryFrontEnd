@@ -3,7 +3,7 @@ const DeleteModal = (props) => {
   props.setIsClick(false);
   const deleteData = (docId) => {
     axios
-      .delete(`http://localhost:4000/deleteMeMo/${docId}`, {
+      .delete(`/deleteMeMo/${docId}`, {
         data: props.userData,
       })
       .then((res) => {

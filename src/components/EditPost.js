@@ -16,14 +16,14 @@ function EditPost(props) {
   const ref = useRef();
   const documentID = props.documentID;
   const getOldData = (docId) => {
-    axios.get(`http://localhost:4000/getMemo/${docId}`).then((res) => {
+    axios.get(`/getMemo/${docId}`).then((res) => {
       setPrevData(res.data.data);
       setModal(true);
     });
   };
   const deleteData = (docId) => {
     axios
-      .delete(`http://localhost:4000/deleteMeMo/${docId}`,{ data: props.userData })
+      .delete(`/deleteMeMo/${docId}`,{ data: props.userData })
       .then((res) => {
         console.log(res);
         props.toggleCheckState();

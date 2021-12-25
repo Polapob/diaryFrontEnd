@@ -35,7 +35,7 @@ function MemoModal(props) {
         email: props.userData["email"]
       };
       axios
-        .post("http://localhost:4000/addMemo", data)
+        .post("/addMemo", data)
         .then((res) => {
           // console.log("addmemo");
           // console.log(res.status);
@@ -60,7 +60,7 @@ function MemoModal(props) {
       };
 
       axios
-        .post(`http://localhost:4000/editMemo/${props.documentID}`,data)
+        .post(`/editMemo/${props.documentID}`,data)
         .then((res) => {
           props.close();
           setTimeout(() => {

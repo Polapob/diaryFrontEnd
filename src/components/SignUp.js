@@ -6,7 +6,7 @@ function SignUp(props) {
   const [getEmail, setEmail] = useState("");
   const [getPassword, setPassword] = useState("");
   const [getConfirmPassword, setConfirmPassword] = useState("");
-  const register_url = "http://localhost:4000/register";
+  const register_url = "/register";
   const [getError, setError] = useState("");
   const navigate = useNavigate();
   const postData = (url) => {

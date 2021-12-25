@@ -11,10 +11,6 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import axios from 'axios'
 function App() {
-  const instance = axios.create({
-    withCredentials: true,
-    baseURL: "http://localhost:4000"
-  })
   return (
    <div>
      <Router>

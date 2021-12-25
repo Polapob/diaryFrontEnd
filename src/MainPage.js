@@ -22,7 +22,7 @@ function MainPage(props) {
   const timer = () => {
     if (isLogin){
       setInterval(() => {
-        axios.post("http://localhost:4000/refreshToken",{},{withCredentials:true}).then(res=>{
+        axios.post("/refreshToken",{},{withCredentials:true}).then(res=>{
           console.log(res.status)
         }).catch((err)=>{
           console.log(err);
@@ -37,7 +37,7 @@ function MainPage(props) {
   };
   const postNewMemoHandler = () => {
     axios
-      .post("http://localhost:4000/checkLogin", {}, { withCredentials: true })
+      .post("/checkLogin", {}, { withCredentials: true })
       .then((res) => {
         //console.log(res.status);
         setOpenNewModel(true);
@@ -50,7 +50,7 @@ function MainPage(props) {
   };
   const onClickHandler = () => {
     axios
-      .post("http://localhost:4000/logout", {}, { withCredentials: true })
+      .post("/logout", {}, { withCredentials: true })
       .then((res) => {
         //console.log(res);
         setUserData({});
@@ -63,7 +63,7 @@ function MainPage(props) {
   const checkAuth = async () => {
     console.log(userData);
     axios
-      .post("http://localhost:4000/checkLogin", {}, { withCredentials: true })
+      .post("/checkLogin", {}, { withCredentials: true })
       .then((res) => {
         setUserData(res.data);
         setLogin(true);

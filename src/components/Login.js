@@ -7,7 +7,7 @@ function Login(props) {
   const [getEmail, setEmail] = useState("");
   const [getPassword, setPassword] = useState("");
   const [message, setMessage] = useState("");
-  const url = "http://localhost:4000/login";
+  const url = "/login";
   const [isClick, setIsClick] = useState(false);
   const navigate = useNavigate();
 
